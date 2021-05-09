@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 
-const PORT = 80;
+const PORT = process.env.PORT || 80;
 
 // Serve static files from the React frontend app
 app.use(express.static(path.join(__dirname, '../frontend/build')));
